@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/bike_photo"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/bike"
+            />
+
+        <TextureView
+            android:id="@+id/NameTV"
+            android:visibility="gone"
+            android:paddingTop="10dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:gravity="top|center_horizontal"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/bike_name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/city_Textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bike_name_text_view"
+                tools:layout_editor_absoluteX="10dp"
+                app:layout_constraintBottom_toTopOf="@id/cityCountryCodeText_view"/>
+            <TextView
+                android:id="@+id/cityCountryCodeText_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/city_Textview"
+                app:layout_constraintBottom_toTopOf="@id/locationText_view"/>
+
+            <TextView
+                android:id="@+id/locationText_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/cityCountryCodeText_view"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
